@@ -9,6 +9,7 @@ const prisma = new PrismaClient();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+require("./routes/api-routes")(app)
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/public"));
