@@ -1,11 +1,11 @@
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 import {Request, Response } from "express"
 
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
