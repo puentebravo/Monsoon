@@ -1,2 +1,4 @@
 # Monsoon
-A weather tracking app with a personal twist
+Coming soon: One bot launch platform to rule them all
+
+(Sorry, Tolkien.)
