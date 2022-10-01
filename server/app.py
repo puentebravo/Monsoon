@@ -1,21 +1,19 @@
 from flask import Flask
+from flask import request
+from bots import huntsman
 
 def create_app(text_config=None):
     app = Flask(__name__)
     app.url_map.strict_slashes= False
 
-    @app.route("/getWeather")
-    def getWeather():
-        response_body: dict = {
-            "name": "Weather",
-            "Temp": "It is 76F and sunny today"
-        }
+    @app.route("/api/getStock")
+    def getStock():
+        huntsman.Hunt(request.json.url)
+        
 
-        return response_body
-
-    @app.route("/")
-    def home():
-        return "<h1> Under development </h1>"
+    @app.route("/api/test")
+    def testRoute():
+        return "Server online and responding to requests."
 
     return app
 
