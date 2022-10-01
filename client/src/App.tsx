@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import BotSelector from './components/botSelector';
 import Footer from './components/footer';
-import Header from './components/header';
+import Header from './components/header/index';
 
 function App() {
 
